@@ -6,3 +6,26 @@ To automatically generate a proceeding of conference papers in Overleaf, you can
 - In the main.tex file, use the command \begin{papers} to indicate the beginning of the paper list.
 - For each paper, use the command \collected{filename} to include the paper in the proceeding. For example, if you have a paper1.tex file in the paper1 folder, you can use the command \collected{paper1/paper1} to include the paper.
 - Use the command \end{papers} to indicate the end of the paper list
+Here is an example code for the main.tex file:
+
+
+\documentclass{article}
+
+\usepackage{combine}
+
+\begin{document}
+
+\title{Proceeding of Conference Papers}
+
+\author{Your Name}
+
+\maketitle
+
+\begin{papers}
+
+\collected{paper1/paper1}
+\collected{paper2/paper2}
+
+\end{papers}
+
+\end{document}
